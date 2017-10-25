@@ -8,7 +8,7 @@
 
 namespace Framework;
 
-class SimpleException extends \Exception
+class Exception extends \Exception
 {
 
     const ROUTER_FAILED       = 10001;

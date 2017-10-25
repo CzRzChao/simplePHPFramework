@@ -18,7 +18,7 @@ class DefaultFactory extends Di
             'router'     => new Service('router', 'Framework\Router'),
             'dispatcher' => new Service('dispatcher', 'Framework\Dispatcher'),
             'response'   => new Service('response', 'Framework\Response'),
-            'exception'  => new Service('exception', 'Framework\SimpleException'),
+            'exception'  => new Service('exception', 'Framework\Exception'),
         ];
     }
 

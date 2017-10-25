@@ -3,7 +3,7 @@
  * Copyright © czrzchao.com
  * User: czrzchao
  * Date: 2017/10/23 21:23
- * Desc: 
+ * Desc: http响应
  */
 
 namespace Framework;
@@ -17,29 +17,11 @@ class Response
     protected $status;
     protected $is_send;
 
-    public function __construct($content = null, $code = null, $status = null)
+    public function __construct($content = null)
     {
         if ($content !== null) {
             $this->content = $content;
         }
-        if () {
-
-        }
-    }
-
-    public function setContentType($content_type)
-    {
-        $this->content_type = $content_type;
-    }
-
-    public function setHeader($header)
-    {
-        $this->header = $header;
-    }
-
-    public function setStatus($status)
-    {
-        $this->status = $status;
     }
 
     public function setContent($content)
@@ -52,11 +34,6 @@ class Response
         $this->content = json_encode($content);
     }
 
-    public function setException($code, $message)
-    {
-        $this->setJsonContent(['code' => $code, 'message' => $message]);
-    }
-
     public function getContent()
     {
         return $this->content;
@@ -64,9 +41,7 @@ class Response
 
     public function send()
     {
-        if () {
-
-        }
+        echo $this->content;
     }
 
 }
